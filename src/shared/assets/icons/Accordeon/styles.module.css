@@ -1,0 +1,7 @@
+.accordeon {
+  transition: transform 0.32s ease-in-out;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}

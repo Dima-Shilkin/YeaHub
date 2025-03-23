@@ -1,0 +1,20 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 12px;
+  height: 44px;
+  font-weight: 500;
+  line-height: 120%;
+  padding: 0px 12px;
+  border: 1px solid var(--Black-200);
+  color: var(--Black-800);
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 0 0 1px var(--Purple-700);
+}

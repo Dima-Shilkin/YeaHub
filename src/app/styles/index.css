@@ -1,0 +1,20 @@
+@import "./normalize.css";
+@import "./reset.css";
+@import "./variables.css";
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--Black-25);
+}
+body::-webkit-scrollbar {
+  width: 0; /* Убираем вертикальную полосу прокрутки */
+  height: 0; /* Убираем горизонтальную полосу прокрутки */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: transparent; /* Убираем сам индикатор прокрутки */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent; /* Убираем фон полосы прокрутки */
+}

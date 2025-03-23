@@ -1,0 +1,16 @@
+.regBtn {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  background-color: var(--Purple-700);
+  color: var(--White-900);
+  width: 170px;
+  height: 48px;
+  border-radius: 12px;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.regBtn:hover {
+  opacity: 0.7;
+}

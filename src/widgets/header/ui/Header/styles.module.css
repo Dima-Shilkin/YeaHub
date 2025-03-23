@@ -1,0 +1,36 @@
+.header {
+  border-bottom: 1px solid var(--Black-50);
+  min-height: 64px;
+  background-color: var(--White-900);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 52px;
+  padding: 8px 0;
+}
+
+.header__left {
+  display: flex;
+  align-items: center;
+  gap: 52px;
+}
+
+.logo {
+  display: flex;
+  gap: 8px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+  font-weight: 500;
+}
+
+.header__right {
+  display: flex;
+  gap: 26px;
+  align-items: center;
+}
