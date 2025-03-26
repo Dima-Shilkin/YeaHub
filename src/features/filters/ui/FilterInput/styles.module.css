@@ -1,0 +1,24 @@
+.inputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 87%;
+  height: 48px;
+  border-radius: 68px;
+  border: 1px solid var(--Black-50);
+  background: var(--White-900);
+  padding-left: 45px;
+}
+
+.input:focus {
+  border-color: var(--Purple-700);
+  outline: none;
+}
+
+.inputIcon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}

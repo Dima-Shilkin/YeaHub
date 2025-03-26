@@ -1,9 +1,28 @@
+import { useEffect, useState } from "react";
 import styles from "./styles.module.css";
+import { useAppDispatch, useAppSelector } from "@/app/appStore";
+import { setTitle } from "@/entities/filters/slice/filtersSlice";
 
 const FilterInput = () => {
+  const dispatch = useAppDispatch();
+  const title = useAppSelector((state) => state.filters.title);
+  const [value, setValue] = useState(title);
+
+  useEffect(() => {
+    setValue(title);
+  }, [title]);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.target.value;
+    setValue(newValue);
+    dispatch(setTitle(newValue));
+  };
+
   return (
     <div className={styles.inputContainer}>
       <input
+        value={value}
+        onChange={handleChange}
         className={styles.input}
         type="text"
         placeholder="Введите запрос..."

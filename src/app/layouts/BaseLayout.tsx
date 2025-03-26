@@ -10,6 +10,7 @@ const BaseLayout = () => {
       <main className={styles.main}>
         <Outlet />
       </main>
+
       <Footer />
     </div>
   );

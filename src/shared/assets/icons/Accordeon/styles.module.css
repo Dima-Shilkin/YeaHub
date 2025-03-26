@@ -1,5 +1,6 @@
 .accordeon {
   transition: transform 0.32s ease-in-out;
+  flex-shrink: 0;
 }
 
 .rotate {

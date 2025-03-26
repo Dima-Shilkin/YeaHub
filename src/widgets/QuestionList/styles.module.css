@@ -1,0 +1,11 @@
+.questionTitle {
+  font-family: Manrope;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.border {
+  border-bottom: -0.5px solid var(--Black-100);
+  width: 100%;
+}

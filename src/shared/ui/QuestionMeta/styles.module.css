@@ -1,0 +1,30 @@
+.questionMeta {
+  display: flex;
+  gap: 20px;
+}
+
+.metaItem {
+  display: flex;
+  gap: 12px;
+  background-color: var(--Black-10);
+  padding: 6px 10px;
+  border-radius: 8px;
+  align-items: center;
+}
+
+.metaLabel {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.metaValue {
+  color: var(--White-900);
+  background-color: var(--Purple-700);
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 120%;
+}

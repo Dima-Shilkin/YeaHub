@@ -1,0 +1,35 @@
+.questionImg {
+  width: 170px;
+  height: 114px;
+  border-radius: 12px;
+  flex-shrink: 0;
+  display: block;
+}
+
+.question {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  width: 366px;
+  margin-bottom: 12px;
+}
+
+.questionDescription {
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.questionAnswerTitle {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  margin-bottom: 20px;
+}
+
+.questionAnswer {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 130%;
+}
