@@ -1,19 +1,33 @@
 import styles from "./styles.module.css";
 
 interface ButtonProps {
-  id?: number;
-  text?: string;
-  img?: string;
+  id: number;
+  text: string;
+  img: string;
   onClick: (value: number) => void;
+  className?: string;
 }
 
-const ButtonFilters = ({ id, text, img, onClick, ...props }: ButtonProps) => {
+const ButtonFilters = ({
+  id,
+  text,
+  img,
+  onClick,
+  className,
+  ...props
+}: Partial<ButtonProps>) => {
   const handleClick = () => {
-    onClick(id!);
+    if (onClick && id !== undefined) {
+      onClick(id);
+    }
   };
 
   return (
-    <button className={styles.button} {...props} onClick={handleClick}>
+    <button
+      className={`${className} ${styles.button} `}
+      {...props}
+      onClick={handleClick}
+    >
       {img && <img className={styles.img} src={img} alt="" />}
       {text}
     </button>

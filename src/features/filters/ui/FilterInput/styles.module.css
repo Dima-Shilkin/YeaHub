@@ -16,9 +16,3 @@
   border-color: var(--Purple-700);
   outline: none;
 }
-
-.inputIcon {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-}

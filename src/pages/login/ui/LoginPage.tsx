@@ -1,6 +1,6 @@
 import { Container } from "@/shared/ui";
 
-const Page = () => {
+const LoginPage = () => {
   return (
     <Container>
       <p>
@@ -10,4 +10,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default LoginPage;

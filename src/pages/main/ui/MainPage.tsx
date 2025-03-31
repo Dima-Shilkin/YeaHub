@@ -1,37 +1,37 @@
 import { Container } from "@/shared/ui";
 import styles from "./styles.module.css";
 import { useGetQuestionsQuery } from "@/entities/questions/api/questionsApi";
-import QuestionList from "@/widgets/QuestionList/QuestionList";
-import Loader from "@/shared/ui/Loader/Loader";
 import ReactPaginate from "react-paginate";
 import ButtonPagination from "@/shared/ui/button/ButtonPagination/ButtonPagination";
 import left from "@/shared/assets/icons/ArrowLeft.svg";
 import right from "@/shared/assets/icons/ArrowRight.svg";
-import { useAppDispatch, useAppSelector } from "@/app/appStore";
 import Card from "@/shared/ui/Card/Card";
 import ContentWrapper from "@/shared/ui/ContentWrapper/ContentWrapper";
+import useQueryParams from "@/shared/hooks/useQueryParams";
+import { FilterList } from "@/widgets/filterList";
+import { NotFound, QuestionList } from "@/widgets/questionList";
+import MainSkeleton from "./MainSkeleton";
 
-import FilterList from "@/widgets/FilterList/FilterList";
-import { setPage } from "@/entities/filters/slice/filtersSlice";
+const MainPage = () => {
+  const { allQueryParams, setQueryParam } = useQueryParams();
 
-const Page = () => {
-  const dispatch = useAppDispatch();
-  const currentPage = useAppSelector((state) => state.filters.page);
+  const params = allQueryParams;
+  const currentPage = Number(allQueryParams.page);
 
-  const { data, isLoading } = useGetQuestionsQuery({ page: currentPage });
+  const { data, isLoading } = useGetQuestionsQuery(params);
+
+  if (data?.data.length === 0) {
+    return <NotFound />;
+  }
 
   const totalPage = Math.ceil((data?.total ?? 0) / 10);
 
   const handlePageChange = (selectedPage: { selected: number }) => {
-    dispatch(setPage(selectedPage.selected + 1));
+    setQueryParam("page", selectedPage.selected + 1);
   };
 
   if (isLoading) {
-    return (
-      <div>
-        <Loader />
-      </div>
-    );
+    return <MainSkeleton />;
   }
 
   return (
@@ -50,6 +50,7 @@ const Page = () => {
             containerClassName={styles.pagination}
             disabledClassName={styles.disabled}
             onPageChange={handlePageChange}
+            forcePage={currentPage > 0 ? currentPage - 1 : 0}
           />
         </Card>
         <FilterList />
@@ -58,4 +59,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default MainPage;

@@ -1,6 +1,6 @@
 import { Container } from "@/shared/ui";
 
-const Page = () => {
+const RegistrationPage = () => {
   return (
     <Container>
       <p>
@@ -11,4 +11,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default RegistrationPage;

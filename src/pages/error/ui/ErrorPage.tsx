@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import error from "@/shared/assets/icons/Error.svg";
 import { Link } from "react-router-dom";
 
-const Page = () => {
+const ErrorPage = () => {
   return (
     <Container>
       <div className={styles.errorPage}>
@@ -21,4 +21,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default ErrorPage;

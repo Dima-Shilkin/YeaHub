@@ -5,3 +5,7 @@
   gap: 24px;
   flex-direction: column;
 }
+
+button.active {
+  box-shadow: 0 0 0 1px var(--Purple-700);
+}

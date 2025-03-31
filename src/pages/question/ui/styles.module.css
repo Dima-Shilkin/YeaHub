@@ -23,3 +23,7 @@
   line-height: 160%;
   color: var(--Purple-700);
 }
+
+.skeleton {
+  margin-top: 50px;
+}

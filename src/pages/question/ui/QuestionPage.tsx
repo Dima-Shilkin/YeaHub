@@ -9,10 +9,19 @@ import ButtonFilters from "@/shared/ui/button/ButtonFilters/ButtonFilters";
 import QuestionMeta from "@/shared/ui/QuestionMeta/QuestionMeta";
 import FullQuestion from "@/widgets/FullQuestion/FullQuestion";
 import ButtonBack from "@/shared/ui/button/ButtonBack/ButtonBack";
+import QuestionSkeleton from "./QuestionSkeleton";
 
-const Page = () => {
+const QuestionPage = () => {
   const { id } = useParams();
   const { data, isLoading } = useGetQuestionByIdQuery(id || 1);
+
+  if (isLoading) {
+    return <QuestionSkeleton />;
+  }
+
+  if (!data) {
+    return <div>Ошибка загрузки данных.</div>;
+  }
 
   return (
     <Container>
@@ -43,4 +52,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default QuestionPage;
