@@ -1,3 +1,3 @@
-import QuestionPage from "./ui/Page";
+import QuestionPage from "./ui/QuestionPage";
 
 export {QuestionPage}

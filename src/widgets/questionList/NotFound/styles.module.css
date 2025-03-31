@@ -1,0 +1,26 @@
+.notFoundWrapper {
+  max-width: 1216px;
+  margin: 0 auto;
+  align-items: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.resetFilter {
+  width: 240px;
+  height: 48px;
+  padding: 13px 0px;
+  font-weight: 600;
+  line-height: 110%;
+  color: var(--Purple-700);
+  border-radius: 12px;
+  border: 1px solid var(--Purple-700);
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.resetFilter:hover {
+  background-color: var(--Black-25);
+}

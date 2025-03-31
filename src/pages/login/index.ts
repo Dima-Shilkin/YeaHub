@@ -1,3 +1,3 @@
-import LoginPage from "./ui/Page";
+import LoginPage from "./ui/LoginPage";
 
 export {LoginPage}
