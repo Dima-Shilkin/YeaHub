@@ -2,7 +2,6 @@ import FilterInput from "@/features/filters/ui/FilterInput/FilterInput";
 import styles from "./styles.module.css";
 import Card from "@/shared/ui/Card/Card";
 import { useGetSkillsQuery } from "@/entities/skills/api/skillsApi";
-import { useGetSpecializatiQuery } from "@/entities/specializations/api/specializations";
 import { complexityRanges, ratingRanges } from "../helpers/helpers";
 import { useHendleClickFilters } from "@/features/filters/hooks/useHendleClickFilters";
 import { useActiveFilters } from "@/features/filters/hooks/useActiveFilters";
@@ -14,11 +13,12 @@ import {
   SpecializationFilter,
 } from "@/entities/filters";
 import FilterListSkeleton from "./FilterListSkeleton";
+import { useGetSpecializationsQuery } from "@/entities/specializations/api/specializations";
 
 const FilterList = () => {
   const [limit, setLimit] = useState(4);
   const { data, isLoading } = useGetSkillsQuery();
-  const { data: spec, isLoading: isLoadingSpec } = useGetSpecializatiQuery({
+  const { data: spec, isLoading: isLoadingSpec } = useGetSpecializationsQuery({
     limit,
   });
 
