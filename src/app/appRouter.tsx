@@ -5,8 +5,8 @@ import { RegistrationPage } from "@/pages/registration";
 import ErrorPage from "@/pages/error";
 import { lazy, Suspense } from "react";
 import Loader from "@/shared/ui/Loader/Loader";
+import { QuestionsPage } from "@/pages/main";
 
-const QuestionsPage = lazy(() => import("@/pages/main/ui/MainPage"));
 const QuestionPage = lazy(() => import("@/pages/question/ui/QuestionPage"));
 
 export const appRouter = createBrowserRouter([
@@ -15,11 +15,7 @@ export const appRouter = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: (
-          <Suspense fallback={<Loader />}>
-            <QuestionsPage />
-          </Suspense>
-        ),
+        element: <QuestionsPage />,
       },
       {
         path: "/question/:id",
