@@ -1,0 +1,29 @@
+.filterContainer {
+  max-width: 344px;
+  min-width: 344px;
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+}
+
+.questionWrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.questionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.keywords {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  color: var(--Purple-700);
+}
+
+.skeleton {
+  margin-top: 50px;
+}

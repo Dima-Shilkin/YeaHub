@@ -1,3 +1,3 @@
-import RegistrationPage from "./ui/Page";
+import RegistrationPage from "./ui/RegistrationPage";
 
 export {RegistrationPage}

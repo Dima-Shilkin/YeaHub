@@ -1,0 +1,26 @@
+.title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 120%;
+  color: var(--Black-700);
+}
+
+.filterCard {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2px;
+  margin: 8px 0;
+  gap: 10px;
+}
+
+.showAll {
+  font-weight: 400;
+  line-height: 120%;
+  font-size: 14px;
+  color: var(--Purple-800);
+}
+
+.showAll:hover {
+  text-decoration-line: underline;
+  text-decoration-skip-ink: none;
+}

@@ -1,3 +1,3 @@
-import ErrorPage from "./ui/Page";
+import ErrorPage from "./ui/ErrorPage";
 
 export default ErrorPage

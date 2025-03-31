@@ -1,0 +1,23 @@
+.arrow {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--Purple-700);
+  cursor: pointer;
+  background-color: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 120%;
+}
+.arrow:disabled {
+  cursor: not-allowed;
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+.arrow:hover {
+  background-color: var(--Black-25);
+}
