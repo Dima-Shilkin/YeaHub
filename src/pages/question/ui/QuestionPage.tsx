@@ -13,7 +13,7 @@ import QuestionSkeleton from "./QuestionSkeleton";
 
 const QuestionPage = () => {
   const { id } = useParams();
-  const { data, isLoading } = useGetQuestionByIdQuery(id || 1);
+  const { data, isLoading } = useGetQuestionByIdQuery(id!);
 
   if (isLoading) {
     return <QuestionSkeleton />;
@@ -34,9 +34,9 @@ const QuestionPage = () => {
           <div className={styles.filterContainer}>
             {data && <QuestionMeta question={data} />}
             <FilterSection title="Навыки">
-              <ButtonFilters text="React" />
-              <ButtonFilters text="Javascript" />
-              <ButtonFilters text="Dom" />
+              {data?.questionSkills.map(({ id, title }) => (
+                <ButtonFilters key={id} text={title} />
+              ))}
             </FilterSection>
             <FilterSection title="Ключевые слова">
               {data?.keywords.map((el, i) => (

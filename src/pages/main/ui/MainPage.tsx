@@ -14,11 +14,9 @@ import MainSkeleton from "./MainSkeleton";
 
 const MainPage = () => {
   const { allQueryParams, setQueryParam } = useQueryParams();
-
-  const params = allQueryParams;
   const currentPage = Number(allQueryParams.page);
 
-  const { data, isLoading } = useGetQuestionsQuery(params);
+  const { data, isLoading } = useGetQuestionsQuery(allQueryParams);
 
   if (data?.data.length === 0) {
     return <NotFound />;
